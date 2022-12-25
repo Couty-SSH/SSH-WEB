@@ -24,7 +24,7 @@ function install_start {
   msg -bar
   echo -e "\e[1;97m           \e[5m\033[1;100m  O sistema será atualizado.\n Pode demorar um pouco e pedir algumas confirmações. \033[1;37m"
   #print_center -ama "O sistema será atualizado.\n Pode demorar um pouco e pedir algumas confirmações.\n"
-  msg -bar3
+  #msg -bar3
   msg -ama "\n Você deseja continuar? [S/n]: "
   read opcion
   [[ "$opcion" != @(s|S) ]] && stop_install
