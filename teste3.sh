@@ -22,7 +22,8 @@ function install_start {
   msg -bar
   echo -e "\e[1;97m           \e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA   \033[1;37m"
   msg -bar
-  print_center -ama "O sistema será atualizado.\n Pode demorar um pouco e pedir algumas confirmações.\n"
+  echo -e "\e[1;97m           \e[5m\033[1;100m  O sistema será atualizado.\n Pode demorar um pouco e pedir algumas confirmações. \033[1;37m"
+  #print_center -ama "O sistema será atualizado.\n Pode demorar um pouco e pedir algumas confirmações.\n"
   msg -bar3
   msg -ne "\n Você deseja continuar? [S/n]: "
   read opcion
@@ -61,7 +62,7 @@ dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
 echo -e "\E[44;1;37m    INSTALANDO PAINEL    \E[0m"
 echo ""
-echo -e "SSH WEB" | figlet | boxes -d stone -p a0v0 | lolcat
+echo -e "CoutySSH WEB" | figlet | boxes -d stone -p a0v0 | lolcat
 echo -e "                              \033[1;31mBy @Couty_SSH\033[1;36m" | lolcat
 echo ""
 chave=$(curl -sSL "https://raw.githubusercontent.com/CoutySSH/SSH-WEB/main/chave") &>/dev/null
@@ -86,15 +87,15 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
 #} > /dev/null
 clear
 echo ""
-echo -e "SSH WEB" | figlet | boxes -d stone -p a0v0 | lolcat
+echo -e "CoutySSH WEB" | figlet | boxes -d stone -p a0v0 | lolcat
 echo -e "                              \033[1;31mBy @Couty_SSH\033[1;36m" | lolcat
 echo ""
 #echo -e "\033[1;36mDEFINA UMA NOVA SENHA PARA\033[0m" | lolcat
 #echo -e "\033[1;36mO USUÁRIO ROOT DA VPS E\033[0m" | lolcat
 #echo -e "\033[1;36mPARA O USUÁRIO DO PHPMYADMIN!\033[0m" | lolcat
 #echo ""
-read -p "DIGITE UMA NOVA SENHA ROOT: " pwdroot
-echo "root:$pwdroot" | chpasswd
+#read -p "DIGITE UMA NOVA SENHA ROOT: " pwdroot
+#echo "root:$pwdroot" | chpasswd
 echo -e "\n\033[1;36mINICIANDO INSTALAÇÃO \033[1;33mAGUARDE..."
 sleep 3
-install_start
+
