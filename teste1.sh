@@ -45,7 +45,7 @@ function install_start {
   msg -bar
   sleep 3
   clear
-fi
+#fi
 }
 #cd || exit
 #sed -i "s;49875103u;$pwdroot;g" /var/www/html/pages/system/config.php > /dev/null 2>&1
