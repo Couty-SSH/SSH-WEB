@@ -28,7 +28,7 @@ function install_start {
   read opcion
   [[ "$opcion" != @(s|S) ]] && stop_install
   clear && clear
-  os_system
+  #os_system
   msg -bar
   echo -e "\e[1;97m           \e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA   \033[1;37m"
   msg -bar
@@ -45,7 +45,7 @@ function install_start {
   msg -bar
   sleep 3
   clear
-#fi
+fi
 }
 #cd || exit
 #sed -i "s;49875103u;$pwdroot;g" /var/www/html/pages/system/config.php > /dev/null 2>&1
@@ -84,6 +84,7 @@ read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
             exit;
           fi
 #} > /dev/null
+clear
 echo ""
 echo -e "SSH WEB" | figlet | boxes -d stone -p a0v0 | lolcat
 echo -e "                              \033[1;31mBy @Couty_SSH\033[1;36m" | lolcat
@@ -96,3 +97,4 @@ read -p "DIGITE UMA NOVA SENHA ROOT: " pwdroot
 echo "root:$pwdroot" | chpasswd
 echo -e "\n\033[1;36mINICIANDO INSTALAÇÃO \033[1;33mAGUARDE..."
 sleep 3
+install_start
